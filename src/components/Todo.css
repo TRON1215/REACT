@@ -1,0 +1,30 @@
+.back-icon{
+    font-size: 30px;
+    margin-right: 10px;
+    cursor: pointer;
+    color: #ffc83dc8;
+}
+
+.back-icon:hover{
+    animation: moveLeft 1s infinite;
+    color: #ffc83dfa;
+}
+
+@keyframes moveLeft{
+    0%{
+        transform: translateX(0px);
+    }
+    50%{
+        transform: translateX(-10px);
+    }
+    100%{
+        transform: translateX(0px);
+    }
+}
+
+@media screen and (max-width: 786px){
+    .todo-title{
+        text-align: center;
+        font-size: large;
+    }
+}

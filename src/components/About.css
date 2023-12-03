@@ -1,0 +1,13 @@
+.description{
+    width: 50%;
+    text-align: center;
+}
+
+@media screen and (max-width: 768px){
+    .title{
+        font-size: x-large;
+    }
+    .description{
+        width: 95%;
+    }
+}

@@ -1,0 +1,34 @@
+/* .home-wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 5% 0;
+
+} */
+
+.subtitle{
+    font-size: 1rem;
+    width: 25ch;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.15em solid #ffc83b;
+    animation: typing 2s steps(22),blink 0.5s step-end infinite alternate;
+}
+
+@keyframes typing {
+    from{
+        width: 0;
+    }
+}
+@keyframes blink{
+    50%{
+        border-color: #ffc83db5;
+    }
+}
+
+@media (max-width: 768px){
+    .subtitle{
+        font-size: 1.5rem;
+    }
+}
