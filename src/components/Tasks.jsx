@@ -71,7 +71,7 @@ export const Tasks = () => {
         const newTodos=[];
         setTodos(newTodos);
         localStorage.setItem('todos',JSON.stringify(newTodos))
-        success('task deleted successfully')
+        success('all task deleted successfully')
     }
 
     const handleUpdateTodo = (index) => {
@@ -128,20 +128,23 @@ export const Tasks = () => {
                 </div>
                 
             ))}
-            <div>
-            <Trash2 
-                        onClick={()=>handleDeleteAll()}
-                        className='trash-icon'
-                        // className={`trash-icon ${onClickCheck ? 'loading':null}`}
-
-                        />
-            </div>
+            
             <div className='todo-item'>
                 {(todoIndex === -1 && onClickCheck) && <span style={{opacity: 0.5}}>
                     {todos.length + 1}.{todo}
                 </span>}
             </div>
+            
+        </div>
+        <div>
+        <Trash2 
+                        onClick={()=>handleDeleteAll()}
+                        className='trash-icon'
+                        // className={`trash-icon ${onClickCheck ? 'loading':null}`}
+
+                        />
         </div>
     </div>
+    
   )
 }
