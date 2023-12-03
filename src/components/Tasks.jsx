@@ -67,10 +67,11 @@ export const Tasks = () => {
 
     }
     const handleDeleteAll= async () =>{
+
         await wait(500);
-        const newTodos=[];
-        setTodos(newTodos);
-        localStorage.setItem('todos',JSON.stringify(newTodos))
+        if(window.confirm("Are U sure?"))
+        localStorage.removeItem('todos');
+        setTodos([]);
         success('all task deleted successfully')
     }
 
@@ -136,14 +137,9 @@ export const Tasks = () => {
             </div>
             
         </div>
-        <div className='todos-wrapper'>
-        <Trash2 
-                        onClick={()=>handleDeleteAll()}
-                        className='trash-icon'
-                        // className={`trash-icon ${onClickCheck ? 'loading':null}`}
-
-                        />
-        </div>
+        {todo.length ? <button className='btn-clear' onClick={handleDeleteAll}>
+            clear all
+        </button>:null}
     </div>
     
   )

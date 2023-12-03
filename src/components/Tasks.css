@@ -83,6 +83,19 @@
     animation: spin 1.5s linear infinite;
 }
 
+.btn-clear{
+    background: linear-gradient(to right, #ff416dc5,#fffb2b);
+    border: 1px solid #ccc;
+    border-radius: 15px;
+    padding: 0 10px;
+    font-size: 15px;
+    font-weight: bold;
+    box-shadow: 0 0 0 1px #ffffff;
+    width: 24%;
+    height: 2rem;
+    cursor: pointer;
+}
+
 @keyframes spin {
     100%{
         transform: rotate(360deg);
@@ -103,6 +116,9 @@
     .todo-item{
         width: 21rem;
     }
+    .btn-clear{
+        width: 80%;
+    }
 }
 
 @media (max-width: 320px){
@@ -115,4 +131,5 @@
     .todo-item{
         width: 18rem;
     }
+    
 }
