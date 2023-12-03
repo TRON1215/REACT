@@ -68,8 +68,9 @@ export const Tasks = () => {
     }
     const handleDeleteAll= async () =>{
         await wait(500);
-        todos=[];
-        localStorage.setItem('todos',JSON.stringify(todos))
+        const newTodos=[];
+        setTodos(newTodos);
+        localStorage.setItem('todos',JSON.stringify(newTodos))
         success('task deleted successfully')
     }
 
@@ -124,6 +125,7 @@ export const Tasks = () => {
 
                         />
                     </div>
+                    <br></br>
                     <Trash2 
                         onClick={()=>handleDeleteAll()}
                         className='trash-icon'
