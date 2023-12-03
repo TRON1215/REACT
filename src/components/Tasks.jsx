@@ -136,7 +136,7 @@ export const Tasks = () => {
             </div>
             
         </div>
-        <div>
+        <div className='todos-wrapper'>
         <Trash2 
                         onClick={()=>handleDeleteAll()}
                         className='trash-icon'
