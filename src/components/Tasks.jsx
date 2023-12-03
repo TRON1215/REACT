@@ -69,7 +69,7 @@ export const Tasks = () => {
     const handleDeleteAll= async () =>{
 
         await wait(500);
-        if(window.confirm("Are U sure?"))
+        if(!window.confirm("Are you sure you want to delete all tasks?"))return;
         localStorage.removeItem('todos');
         setTodos([]);
         success('all task deleted successfully')
@@ -137,7 +137,7 @@ export const Tasks = () => {
             </div>
             
         </div>
-        {todo.length ? <button className='btn-clear' onClick={handleDeleteAll}>
+        {todos.length ? <button className='btn-clear' onClick={handleDeleteAll}>
             clear all
         </button>:null}
     </div>
