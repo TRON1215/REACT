@@ -124,16 +124,18 @@ export const Tasks = () => {
                         // className={`trash-icon ${onClickCheck ? 'loading':null}`}
 
                         />
-                    </div>
-                    <br></br>
-                    <Trash2 
+                    </div>                    
+                </div>
+                
+            ))}
+            <div>
+            <Trash2 
                         onClick={()=>handleDeleteAll()}
                         className='trash-icon'
                         // className={`trash-icon ${onClickCheck ? 'loading':null}`}
 
                         />
-                </div>
-            ))}
+            </div>
             <div className='todo-item'>
                 {(todoIndex === -1 && onClickCheck) && <span style={{opacity: 0.5}}>
                     {todos.length + 1}.{todo}
